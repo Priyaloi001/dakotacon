@@ -62,7 +62,7 @@ const SpeakersGrid = () => {
                                 onClick={() => setSelectedSpeaker(speaker)}
                                 className="mt-4  underline font-medium text-[#3d35c7] cursor-pointer"
                             >
-                                View Bio
+                                Read More
                             </button>
                         </div>
                     ))}

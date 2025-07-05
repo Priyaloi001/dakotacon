@@ -7,12 +7,14 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation()
+    
     const { pathname } = useLocation();
-
+    // scroll to page top when visiting
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
     const isHomePage = location.pathname === '/'
+    // for sticky haeder
     useEffect(() => {
         const handleScroll = () => {
             const offset = window.scrollY;
@@ -34,7 +36,7 @@ const Header = () => {
             <div className="container mx-auto py-3 lg:py-7 flex justify-between">
                 {/* logo */}
                 <div>
-                    <img src="/assets/images/logo.webp" alt="logo" className="w-40 lg:w-60 object-contain" />
+                    <img src="/assets/images/header-logo.png" alt="logo" className="w-16 h-16 object-contain" />
                 </div>
                 {/* Hamburger for Mobile */}
                 <button
@@ -63,15 +65,15 @@ const Header = () => {
                         } >
                             home
                         </NavLink>
-                     
-                            <HashLink smooth to="/#schedule" onClick={() => setIsOpen(false)} scroll={(el) => {
-                                const yOffset = -100; // adjust this based on your header height
-                                const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-                                window.scrollTo({ top: y, behavior: "smooth" });
-                            }} className="capitalize text-black cursor-pointer text-sm xl:text-base font-primary hover:bg-[#ffffff63] not-first:py-2 px-5 hover:rounded-md duration-200">
-                                Schedule
-                            </HashLink>
-                       
+
+                        <HashLink smooth to="/#schedule" onClick={() => setIsOpen(false)} scroll={(el) => {
+                            const yOffset = -100; // adjust this based on your header height
+                            const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+                            window.scrollTo({ top: y, behavior: "smooth" });
+                        }} className="capitalize text-black cursor-pointer text-sm xl:text-base font-primary hover:bg-[#ffffff63] not-first:py-2 px-5 hover:rounded-md duration-200">
+                            Schedule
+                        </HashLink>
+
                         <NavLink to="/speakers" onClick={() => setIsOpen(false)} className={({ isActive }) =>
                             `capitalize text-black cursor-pointer text-sm xl:text-base font-primary duration-200
      ${isActive ? "bg-black text-white  py-2 px-5 rounded-md" : "hover:bg-black hover:text-white  py-2 px-5 hover:rounded-md"}`
