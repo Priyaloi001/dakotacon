@@ -1,5 +1,5 @@
 // components/SpeakersGrid.tsx
-import React, { useState } from "react";
+import  { useState } from "react";
 
 interface Speaker {
     name: string;
