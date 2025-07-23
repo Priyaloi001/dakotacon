@@ -7,7 +7,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation()
-    
+
     const { pathname } = useLocation();
     // scroll to page top when visiting
     useEffect(() => {
@@ -76,7 +76,7 @@ const Header = () => {
 
                         <NavLink to="/speakers" onClick={() => setIsOpen(false)} className={({ isActive }) =>
                             `capitalize text-black cursor-pointer text-sm xl:text-base font-primary duration-200
-     ${isActive ? "bg-black text-white  py-2 px-5 rounded-md" : "hover:bg-black hover:text-white  py-2 px-5 hover:rounded-md"}`
+     ${isActive ? "bg-[#ffffff63]  py-2 px-5 rounded-md" : "hover:bg-[#ffffff63] py-2 px-5 hover:rounded-md"}`
                         }>
                             Speakers
                         </NavLink>
@@ -87,6 +87,9 @@ const Header = () => {
                             Sponsors
                         </li>
                     </ul>
+                    <NavLink to="/register" onClick={() => setIsOpen(false)} className="ml-5 mt-5 inline-block font-primary capitalize text-white bg-black py-3 px-10 rounded-md  border-1 border-black  text-sm xl:text-base hover:bg-transparent hover:text-black hover:border-black duration-200">
+                        register
+                    </NavLink>
                 </div>
 
                 {/* Optional Overlay */}
@@ -125,10 +128,11 @@ const Header = () => {
                             Sponsors
                         </li>
                     </ul>
+                    
                 </div>
                 {/* button */}
                 <div className="my-auto hidden lg:block">
-                  <NavLink to="/register" className="font-primary capitalize text-black bg-white py-3 px-10 rounded-md  border-1 border-white  text-sm xl:text-base hover:bg-transparent hover:text-white duration-200">
+                    <NavLink to="/register" className="font-primary capitalize text-black bg-white py-3 px-10 rounded-md  border-1 border-white  text-sm xl:text-base hover:bg-transparent hover:text-white duration-200">
                         register
                     </NavLink>
                 </div>
