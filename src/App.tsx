@@ -8,6 +8,7 @@ import Training from './components/Training'
 import Sponsors from './components/Sponsors'
 import Footer from './components/Footer'
 import Speakers from './pages/Speakers'
+import Register from './pages/Register'
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
           }
         />
         {/* Other routes */}
-        <Route path="/speakers" element={<Speakers/>} />      
+        <Route path="/speakers" element={<Speakers/>} />   
+          <Route path="/register" element={<Register/>} />    
       </Routes>
       <Footer />
     </>

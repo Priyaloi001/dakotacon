@@ -6,7 +6,7 @@ const Footer = () => {
                     {/* footer top */}
                     <div className="grid sm:md:grid-cols-3  lg:grid-cols-4 gap-7 border-b-1 border-gray-200 pb-10">
                         <div className="sm:col-span-3 lg:col-span-1 space-y-5">
-                            <img src="/assets/images/footer-logo.svg" alt="logo" width={'200px'} />
+                            <img src="/assets/images/header-logo.png" alt="logo" width={'100px'} />
                             <p className="font-primary text-sm text-[#ffffffc4] ">
                                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                             </p>

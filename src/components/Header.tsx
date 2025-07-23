@@ -128,9 +128,9 @@ const Header = () => {
                 </div>
                 {/* button */}
                 <div className="my-auto hidden lg:block">
-                    <a href="#" className="font-primary capitalize text-black bg-white py-3 px-10 rounded-md  border-1 border-white  text-sm xl:text-base hover:bg-transparent hover:text-white duration-200">
+                  <NavLink to="/register" className="font-primary capitalize text-black bg-white py-3 px-10 rounded-md  border-1 border-white  text-sm xl:text-base hover:bg-transparent hover:text-white duration-200">
                         register
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </header>
